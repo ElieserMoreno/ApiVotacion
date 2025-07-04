@@ -2,7 +2,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
-# 👉 Para pruebas usaremos SQLite:
+#  Para pruebas usaremos SQLite:
 SQLALCHEMY_DATABASE_URL = "sqlite:///./voting.db"
 
 engine = create_engine(
@@ -13,7 +13,7 @@ SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 Base = declarative_base()
 
-# ✅ ESTA FUNCIÓN ES FUNDAMENTAL 👇
+
 def get_db():
     db = SessionLocal()
     try:
